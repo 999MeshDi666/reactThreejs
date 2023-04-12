@@ -3,7 +3,7 @@ import { MeshReflectorMaterial } from "@react-three/drei";
 const Floor = (props) =>{
     const [ref] = usePlane(() => ({ type: "Static", ...props }))
     return(
-        <mesh ref={ref} receiveShadow>
+        <mesh {...props} receiveShadow>
         <planeGeometry args={[100, 100]} />
         <MeshReflectorMaterial
           color="#4d3c12"
